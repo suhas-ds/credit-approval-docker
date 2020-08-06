@@ -3,6 +3,7 @@ RUN apt-get update -y
 # RUN apt-get install -y python3-pip python3-dev build-essential
 COPY . /app
 WORKDIR /app
+pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r requirements.txt
 # ENTRYPOINT ["python"]
 CMD python /app/model.py && python /app/app.py

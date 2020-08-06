@@ -1,5 +1,6 @@
 
-name: Credit Card Application app container to Heroku
+name: Credit-Approval-Docker-Heroku
+
 
 on: 
   push:
@@ -8,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
     - name: Login to Heroku Container registry
